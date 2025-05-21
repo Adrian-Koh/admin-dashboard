@@ -132,8 +132,7 @@ input[type='search'] {
     background-color: darkgoldenrod;
 }
 
-.sidebar img, .header img {
-    color: white;
+.icon {
     width: 2rem;
 }
 
@@ -147,7 +146,8 @@ input[type='search'] {
 
 .greeting-and-pic {
     display: grid;
-    grid-template-columns: 3rem 1fr;
+    grid-template-columns: 4rem 1fr;
+    gap: 15px;
     align-items: center;
 }
 
@@ -162,5 +162,8 @@ input[type='search'] {
 
 .profile-pic {
     width: 4rem;
+    border: solid 2px white;
+    border-radius: 2rem;
     height: auto;
+    background-color: white;
 }
