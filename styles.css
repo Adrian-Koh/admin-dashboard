@@ -15,9 +15,7 @@
 .sidebar {
     grid-row: 1 / 3;
     grid-column: 1 / 2;
-    background-color: chartreuse;
-
-    
+    background-color: chartreuse;    
 }
 
 .sidebar-container {
@@ -50,6 +48,12 @@ ul {
     gap: 15px;
 }
 
+.search-bar-logo {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: 2rem 1fr;
+}
+
 .greeting-section {
     background-color: chocolate;
     display: grid;
@@ -65,10 +69,12 @@ ul {
 }
 
 .profile-icons {
+    justify-self: flex-end;
+
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
-    justify-content: space-between;
+    grid-template-columns: 3rem 1fr 1fr;
     text-align: center;
+    align-items: center;
     gap: 5px;
 }
 
@@ -124,4 +130,16 @@ input[type='search'] {
 .trending-account {
     display: flex;
     background-color: darkgoldenrod;
+}
+
+.sidebar img, .header img {
+    color: white;
+    width: 2rem;
+}
+
+.dashboard-logo, .sidebar li {
+    display: grid;
+    grid-template-columns: 3rem 1fr;
+    text-align: left;
+    align-items: center;
 }
