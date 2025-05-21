@@ -4,7 +4,7 @@ body {
 
 .container {
     display: grid;
-    grid-template-rows: 1fr 4fr;
+    grid-template-rows: auto 4fr;
     grid-template-columns: 1fr 5fr;
 }
 
@@ -13,7 +13,7 @@ body {
     grid-column: 2 / 3;
 
     display: grid;
-    grid-template-rows: 2fr 3fr;
+    grid-template-rows: auto auto;
 
     border-bottom: solid 1px grey;
     box-shadow: grey 0 10px 10px;
@@ -23,14 +23,23 @@ body {
 .sidebar {
     grid-row: 1 / 3;
     grid-column: 1 / 2;
-    background-color: #8DA7BE;    
+    background-color: #0C476E;    
 }
 
 .sidebar-container {
     display: grid;
-    padding: 10px;
-
+    padding: 20px;
+    gap: 20px;
     grid-template-rows: 2fr repeat(auto-fit, minmax(50px, 1fr));
+}
+
+.dashboard-logo {
+    font-size: 1.5rem;
+}
+
+.sidebar ul, .dashboard-logo {
+    font-weight: 700;
+    color: white;
 }
 
 .content {
@@ -117,7 +126,7 @@ input[type='search'] {
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    padding: 5px;
+    padding-left: 5px;
     gap: 15px;
 }
 
@@ -125,7 +134,7 @@ input[type='search'] {
     display: grid;
     grid-template-rows: repeat(auto-fit, minmax(50px, 1fr));
     background-color: white;
-    padding: 10px;
+    padding: 10px 20px;
     margin: 10px;
     gap: 15px;
     border-radius: 10px;
@@ -141,14 +150,18 @@ input[type='search'] {
 }
 
 .trending-accounts {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+    background-color: white;
+    padding: 10px 20px;
+    margin: 10px;
+    gap: 5px;
+    border-radius: 10px;
 }
 
 .trending-account {
     display: flex;
-    background-color: darkgoldenrod;
 }
 
 .icon {
@@ -239,7 +252,7 @@ input[type='search'] {
 }
 
 .projects-grid {
-    padding: 20px;
+    padding: 0 20px;
 }
 
 .announcement-title {
@@ -249,4 +262,22 @@ input[type='search'] {
 
 .announcement-msg {
     font-size: 0.9rem;
+    font-weight: 300;
+}
+
+.trending-profile-pic  {
+    width: 3rem;
+}
+
+.trending-name, .trending-handle {
+    line-height: 1;
+    margin: 5px;
+}
+
+.trending-handle {
+    font-weight: 300;
+}
+
+.sidebar .icon {
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(14deg) brightness(101%) contrast(101%);
 }
