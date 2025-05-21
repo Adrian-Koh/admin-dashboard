@@ -1,7 +1,5 @@
 .container {
     display: grid;
-    width: 1200px;
-    height: 700px;
     grid-template-rows: 1fr 4fr;
     grid-template-columns: 1fr 3fr;
 }
@@ -86,6 +84,8 @@ ul {
     grid-row: 2 / 3;
     grid-column: 2 / 3;
     background-color: rgb(94, 16, 77);
+    display: flex;
+    flex-direction: column;
 }
 
 .projects-grid {
@@ -105,4 +105,15 @@ ul {
     display: flex;
     flex-direction: column;
     background-color: darkslateblue;
+}
+
+.trending-accounts {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.trending-account {
+    display: flex;
+    background-color: darkgoldenrod;
 }
