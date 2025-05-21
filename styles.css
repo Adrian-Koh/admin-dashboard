@@ -1,3 +1,7 @@
+body {
+    font-family: "Lato", sans-serif;
+}
+
 .container {
     display: grid;
     grid-template-rows: 1fr 4fr;
@@ -10,12 +14,16 @@
 
     display: grid;
     grid-template-rows: 2fr 3fr;
+
+    border-bottom: solid 1px grey;
+    box-shadow: grey 0 10px 10px;
+    margin-bottom: 2px;
 }
 
 .sidebar {
     grid-row: 1 / 3;
     grid-column: 1 / 2;
-    background-color: chartreuse;    
+    background-color: #8DA7BE;    
 }
 
 .sidebar-container {
@@ -40,7 +48,7 @@ ul {
 }
 
 .search-section {
-    background-color: burlywood;
+    background-color: #CDE6F5;
     display: grid;
     grid-template-columns: 3fr 2fr;
     align-items: center;
@@ -55,7 +63,7 @@ ul {
 }
 
 .greeting-section {
-    background-color: chocolate;
+    background-color: #CDE6F5;
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
@@ -85,22 +93,23 @@ input[type='search'] {
     width: 80%;
 }
 
+.content {
+    background-color: #D8E0E6;
+}
+
 .projects-container {
     grid-row: 1 / 3;
     grid-column: 1 / 2;
-    background-color: aqua;
 }
 
 .announcements-container {
     grid-row: 1 / 2;
     grid-column: 2 / 3;
-    background-color: cornflowerblue;
 }
 
 .trending-container {
     grid-row: 2 / 3;
     grid-column: 2 / 3;
-    background-color: rgb(94, 16, 77);
     display: flex;
     flex-direction: column;
 }
@@ -115,13 +124,20 @@ input[type='search'] {
 .announcements-content {
     display: grid;
     grid-template-rows: repeat(auto-fit, minmax(50px, 1fr));
+    background-color: white;
+    padding: 10px;
+    margin: 10px;
     gap: 15px;
+    border-radius: 10px;
 }
 
 .announcement {
     display: flex;
     flex-direction: column;
-    background-color: darkslateblue;
+}
+
+.announcement + .announcement {
+    border-top: solid 2px grey;
 }
 
 .trending-accounts {
@@ -175,6 +191,10 @@ input[type='search'] {
     background-color: white;
 }
 
+.greeting-buttons {
+    padding-right: 20px;
+}
+
 .greeting-buttons > button {
     font-size: 1rem;
     font-weight: 700;
@@ -209,7 +229,7 @@ input[type='search'] {
 
 .card-content {
     font-size: 0.9rem;
-    font-weight: 200;
+    font-weight: 300;
 }
 
 .section-title {
@@ -220,4 +240,13 @@ input[type='search'] {
 
 .projects-grid {
     padding: 20px;
+}
+
+.announcement-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.announcement-msg {
+    font-size: 0.9rem;
 }
