@@ -65,7 +65,10 @@ ul {
 
 .greeting-buttons {
     margin-left: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 15px;
+
 }
 
 .profile-icons {
@@ -104,7 +107,7 @@ input[type='search'] {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, 300px);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     padding: 5px;
     gap: 15px;
 }
@@ -134,6 +137,10 @@ input[type='search'] {
 
 .icon {
     width: 2rem;
+}
+
+.card-icon {
+    width: 1rem;
 }
 
 .dashboard-logo, .sidebar li {
@@ -166,4 +173,51 @@ input[type='search'] {
     border-radius: 2rem;
     height: auto;
     background-color: white;
+}
+
+.greeting-buttons > button {
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 15px;
+    color: white;
+    background-color: darkcyan;
+    border: solid 2px white;
+    border-radius: 15px;
+}
+
+.card {
+    background-color: white;
+    display: grid;
+    grid-template-rows: 2rem 1fr 2rem;
+    gap: 15px;
+    padding: 10px;
+    border-left: solid 10px yellow;
+    border-radius: 20px;
+}
+
+.card-icons {
+    display: grid;
+    justify-content: flex-end;
+    grid-template-columns: repeat(3, 1rem);
+    gap: 1rem;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: 900;
+}
+
+.card-content {
+    font-size: 0.9rem;
+    font-weight: 200;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding-left: 30px;
+}
+
+.projects-grid {
+    padding: 20px;
 }
